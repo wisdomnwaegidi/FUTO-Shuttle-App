@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon/logo.ico" type="image/gif" />
+
+    <!-- Title -->
+    <title>FUTO Student | Staff Bus Service</title>
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome style -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+  </head>
+
+  <body style="height: 130vh">
+    <nav class="navbar_1">
+      <div class="container__1">
+        <a href="/" class="img_anchor">
+          <img src="./images/futo logo.jpg" alt="futo logo" class="futo_logo" />
+        </a>
+        <h1 class="h4">Futo Shuttle Transport</h1>
+      </div>
+    </nav>
+
+    <div class="container_1">
+      <div class="form_group1">
+        <div>
+          <h4 class="header_1">Become a Shuttler</h4>
+          <p>Already have an account? <a href="/login">Login</a></p>
+        </div>
+        <div class="error11"></div>
+
+        <form
+          action="http://localhost:3000/api/user"
+          class="form_action"
+          id="form"
+          method="post"
+        >
+          <div class="div__0">
+            <div class="div__1">
+              <label for="inputFirstName" class="labelfirstname"
+                >First name</label
+              >
+              <input
+                type="text"
+                name="firstName"
+                class="input_1 error"
+                id="inputFirstName"
+                placeholder="First Name"
+              />
+
+              <span class="error-message1"></span>
+            </div>
+
+            <div class="div__2">
+              <label for="inputLastName" class="labelsecondname"
+                >Last name</label
+              >
+              <input
+                type="text"
+                name="lastName"
+                class="input_2 error"
+                id="inputLastName"
+                placeholder="Last Name"
+              />
+              <span class="error-message2"></span>
+            </div>
+          </div>
+
+          <div class="div__3">
+            <label for="email" class="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              class="input_3 error"
+              placeholder="Sample@gmail.com"
+              id="inputEmail"
+            />
+            <span class="error-message3"></span>
+          </div>
+
+          <div class="div__4">
+            <label for="phoneNumber" class="number">Phone number</label>
+            <input
+              type="tel"
+              name="phoneNumber"
+              id="inputNumber"
+              class="input_4 error"
+              placeholder="07034344428"
+            />
+            <span class="error-message4"></span>
+          </div>
+
+          <div class="div__5">
+            <label for="bustop" class="bustop">Your Bus Stop</label>
+            <select name="location" id="inputBustop" class="input_5 error">
+              <option disabled selected hidden>Select Location</option>
+              <option>Ikenegbu</option>
+              <option>Orji</option>
+              <option>Wetheral</option>
+              <option>World Bank</option>
+              <option>Amakohia</option>
+              <option>Control</option>
+            </select>
+            <span class="error-message5"></span>
+          </div>
+
+          <div class="div__6">
+            <label for="password" class="number">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="input_6 error"
+              placeholder="password"
+            />
+            <span class="error-message6"></span>
+          </div>
+
+          <div class="div__7">
+            <input type="checkbox" class="toggle__password" />Show Password
+          </div>
+
+          <button type="submit" class="rgstbtn" id="register">Register</button>
+        </form>
+      </div>
+    </div>
+
+    <p class="register_p">
+      <span class="word_wrap">
+        By clicking on "Register", I have read and agreed to Shuttlers'
+        <a
+          href="https://futo.edu.ng/PrivacyPolicy.aspx"
+          class="anchor__terms"
+        ></a> </span
+      ><br />
+      <span
+        >Terms of Service and
+        <a href="/privacypolicy" class="privacy">Privacy Policy</a></span
+      >
+    </p>
+
+    <footer class="footer">
+      <small>
+        <span
+          >This site is protected by reCAPTCHA and the
+          <a
+            href="https://policies.google.com/privacy?hl=en-US#infochoices"
+            class="privacy"
+            >Privacy Policy</a
+          >
+          Google and</span
+        >
+        <br />
+        <span
+          ><a
+            href="https://policies.google.com/terms?hl=en-US"
+            class="anchor__terms"
+            >Terms of Service</a
+          ></span
+        >
+        apply.</small
+      >
+    </footer>
+    <!-- jquery -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- custom JavaScript -->
+    <script src="./js/reg.js"></script>
+  </body>
+</html>

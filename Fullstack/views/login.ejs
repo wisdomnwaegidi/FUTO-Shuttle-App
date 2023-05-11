@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- titile -->
+    <title>FUTO Student | Staff Bus Service</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="favicon/logo.ico" type="image/gif" />
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome style -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- owl carousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw="
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+  </head>
+  <body style="height: 130vh" class="login">
+    <nav class="navbar_1">
+      <div class="container__1">
+        <a href="/" class="img_anchor">
+          <img src="./images/futo logo.jpg" alt="futo logo" class="futo_logo" />
+        </a>
+        <h1 class="h4">Futo Shuttle Transport</h1>
+      </div>
+    </nav>
+
+    <section class="login__section">
+      <div class="container__login">
+        <div class="marquee">
+          <marquee behavior="" direction="">
+            2022/2023 FUTO Joint Universities Preliminary Examinations Board
+            (JUPEB) Foundation School Programme..
+          </marquee>
+        </div>
+        <div class="login__div">
+          <h1 class="h1">Login to your account</h1>
+          <p>
+            Need a Shuttlers account?
+            <a href="/register" class="login__register">Register</a>
+          </p>
+        </div>
+        <main class="form__section">
+          <div class="input__forms__label">
+            <div class="btn" id="btn"></div>
+            <!-- <button class="label__1" id="emaillabel" onclick="emailAddress()">Email Address</button> -->
+            <!-- <button class="label__2" id="phone__label" onclick="phoneNumber()">Phone Number</button> -->
+          </div>
+
+          <form
+            action="http://localhost:3000/login"
+            class="loginForm"
+            method="post"
+            id="login-form"
+          >
+            <div class="input__forms__login">
+              <div class="div">
+                <div class="email__div" id="email__div">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    value=""
+                    placeholder="sample@mail.com"
+                  />
+                  <span class="error-message success-message"></span>
+                </div>
+
+                <div
+                  class="password__number__div password__number--dvd"
+                  id="password__number"
+                >
+                  <label for="password"> Password </label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    value=""
+                    placeholder="eg Mamafrica20"
+                    class="passwordinp"
+                  />
+                  <!-- <i
+                    class="fa fa-eye-slash"
+                    aria-hidden="true"
+                    id="checkbox"
+                  ></i> -->
+                  <!-- <button class="show">show</button> -->
+                  <span class="error-message success-message"></span>
+                </div>
+                <div class="check">
+                  <input
+                    type="checkbox"
+                    name="check"
+                    id="checkbox"
+                    class="checkbox"
+                  />Show Password
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" id="sbtn" class="pwordbtn">Proceed</button>
+          </form>
+        </main>
+      </div>
+    </section>
+    <!-- <script src="//localhost:8000/livereload.js"></script> -->
+    <script src="./js/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+@mixin hero_btn($col1, $col2, $pad1, $pad2, $bRadius) {
+    display: inline-block;
+    padding: $pad1 $pad2;
+    background-color: $col1;
+    color: $col2;
+    border-radius: $bRadius;
+    border: 1px solid $col1;
+    transition: all 0.2s;
+  
+    &:hover {
+      background-color: transparent;
+      color: $col1;
+    }
+  }
+
+  

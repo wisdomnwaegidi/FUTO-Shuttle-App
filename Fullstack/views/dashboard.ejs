@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- title -->
+    <title>FUTO Student | Staff Bus Service</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="/favicon/logo.ico" type="image/gif" />
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome style -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="/css/style.css" rel="stylesheet" />
+
+    <!-- responsive style -->
+    <link href="/css/responsive.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- header section starts -->
+    <header class="header_section">
+      <div class="container-fluid dashboard__container">
+        <nav
+          class="navbar navbar-expand-lg custom_nav-container d-flex justify-content-between black"
+        >
+          <a href="/" class="navbar-brand">
+            <img
+              style="width: 60px"
+              src="/images/futo logo.jpg"
+              alt="futo logo"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="dasbboard-toggler"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse dd__flex"
+            id="navbarSupportedContent"
+          >
+            <div class="ml-lg-auto mr-0">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a href="/charter" class="nav-link dashboard charter"
+                    >Charter<span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dashboard" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dashboard" href="/booking">My Booking</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link dashboard" href="/wallet">My wallet</a>
+                </li>
+                <li class="nav-item">
+                  <i
+                    class="fa fa-bell nav-link dashboard"
+                    aria-hidden="true"
+                  ></i>
+                </li>
+                <li class="nav-item">
+                  <img
+                    src=""
+                    alt=""
+                    style="
+                      border-radius: 100%;
+                      background-color: black;
+                      padding: 20px;
+                    "
+                  />
+                </li>
+                <li class="nav-item">
+                  <% if (user && user.firstName || user.lastName) { %>
+                  <p class="nav-link dashboard user">
+                    Welcome <%= user.firstName %> <%= user.lastName %>
+                  </p>
+                  <small class="nav-link dashboard little"
+                    ><%= user.email %></small
+                  >
+                  <% } %>
+                </li>
+                <li class="nav-item">
+                  <i
+                    class="fa fa-angle-down nav-link dashboard"
+                    aria-hidden="true"
+                    id="unhide"
+                  ></i>
+                </li>
+                <li class="nav-item">
+                  <div class="log">
+                    <div class="logged">
+                      <div class="logline"></div>
+                      <div class="logi">
+                        <span><a class="myaccount" href="">my account</a></span>
+                        <span
+                          ><a class="login" href="/login" id="logout"
+                            >logout</a
+                          ></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+
+    <!-- slider section -->
+    <section class="slider_section">
+      <div class="container-fluid_dashboard">
+        <!-- input fields -->
+        <div class="discover__shuttle__dashboard">
+          <h1 class="dashboard__username">Hello,<%= user.firstName%></h1>
+          <h3 class="dashboard__h3">Discover shuttles that go your way</h3>
+          <div class="formsubmit__dashboard">
+            <form action="/submit" method="post" id="userdashboardform">
+              <div class="fields">
+                <input
+                  type="search"
+                  name="pickup"
+                  id="pickup"
+                  placeholder="From: Pickup Location"
+                  part="Pickup location"
+                  autocomplete="false"
+                  class="input1"
+                />
+
+                <input
+                  type="search"
+                  name="input_2"
+                  id="input_2"
+                  placeholder="To: Arrival Bust stop"
+                  part="To: Arrival Bust stop"
+                  autocomplete="false"
+                />
+
+                <input
+                  type="radio"
+                  name="myRadios"
+                  id="yes"
+                  class="radio"
+                  value="1"
+                />
+                <label for="chose" class="label_1">One-way</label>
+
+                <input
+                  type="radio"
+                  name="myRadios"
+                  id="no"
+                  class="radio"
+                  value="2"
+                />
+                <label for="" class="label_1">Return</label>
+
+                <input
+                  type="radio"
+                  name="myRadios"
+                  id="maybe"
+                  class="radio"
+                  value="3"
+                />
+                <label for="" class="label_1">Suscribe</label>
+              </div>
+
+              <div class="pickdate">
+                <input
+                  type="text"
+                  name="date"
+                  id="datepicker"
+                  placeholder="Choose Date and time"
+                  class="input_1"
+                  onfocus="(this.type='datetime-local')"
+                  onblur="(this.type='text')"
+                />
+              </div>
+
+              <div class="dflex" id="d-flex">
+                <div class="div1">
+                  <label class="label">First Trip</label>
+                  <input
+                    type="text"
+                    size="20"
+                    name="date"
+                    placeholder="Choose Date"
+                    id="first"
+                    class="input"
+                    onfocus="(this.type='date')"
+                    onblur="(this.type='text')"
+                  />
+                  <label class="label">Second Trip</label>
+                  <input
+                    type="text"
+                    name="text"
+                    size="20"
+                    placeholder="Choose Date"
+                    id="second"
+                    class="input"
+                    onfocus="(this.type='date')"
+                    onblur="(this.type='text')"
+                  />
+                </div>
+              </div>
+
+              <div class="subscribe" id="subbd">
+                <h3>Subscription Settings</h3>
+                <div class="select__option">
+                  <select name="booking" id="booking" class="booking__type">
+                    <option value="0" disabled selected hidden id="dis__able">
+                      Booking Type
+                    </option>
+                    <option value="1">One Way</option>
+                    <option value="2">Return Trip</option>
+                  </select>
+                </div>
+
+                <div class="time">
+                  <input
+                    type="text"
+                    name="depature"
+                    id="depature"
+                    class="depature__time"
+                    placeholder="Depature Time"
+                    onfocus="(this.type='datetime-local')"
+                    onblur="(this.type='text')"
+                  />
+                </div>
+
+                <div class="days">
+                  <select
+                    name="daysweeks"
+                    id="daysweeks"
+                    class="booking__type1"
+                  >
+                    <option value="0" id="days" disabled selected hidden>
+                      Select Days
+                    </option>
+                    <option value="1">Sunday</option>
+                    <option value="2">Monday</option>
+                    <option value="3">Tuesday</option>
+                    <option value="4">Wesnesday</option>
+                    <option value="5">Thursday</option>
+                    <option value="6">Friday</option>
+                    <option value="7">Saturday</option>
+                  </select>
+                </div>
+
+                <div class="duration">
+                  <select
+                    name="daysduration"
+                    id="daysduration"
+                    class="booking__type"
+                  >
+                    <option value="0" disabled selected hidden>
+                      Duration in Weeks
+                    </option>
+                    <option value="1">1 week</option>
+                    <option value="2">2 Weeks</option>
+                    <option value="3">3 Weeks</option>
+                    <option value="4">4 Weeks</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" id="auto__submit">
+                Find tickets and Prices
+              </button>
+            </form>
+          </div>
+          <p>
+            <a href="/route" class="anchor_shuttle"> View all Routes</a>
+          </p>
+        </div>
+
+        <!-- images con section -->
+        <div class="quick__bokings">
+          <h1 class="quick__bokings__h1">Quick bookings</h1>
+          <span>Pick from the shuttles on the road today</span>
+
+          <p>Search for routes to get started...</p>
+          <button class="dashboard__routes">Use my favorite routes</button>
+        </div>
+      </div>
+      <!-- end images con section -->
+    </section>
+    <!-- end slider section -->
+
+    <!-- jQuery -->
+    <script src="/js/jquery-3.4.1.min.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="/js/bootstrap.js"></script>
+
+    <!-- owl carousel -->
+    <!-- hosted with cloudflare -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+    <!-- End Google Map -->
+
+    <!-- custom js -->
+    <script src="/js/autocompletedashboard.js"></script>
+
+    <!-- browser sync -->
+    <!-- <script id="__bs_script__">
+      //<![CDATA[
+      (function () {
+        try {
+          var script = document.createElement('script');
+          if ('async') {
+            script.async = true;
+          }
+          script.src =
+            'http://HOST:3000/browser-sync/browser-sync-client.js?v=2.29.0'.replace(
+              'HOST',
+              location.hostname
+            );
+          if (document.body) {
+            document.body.appendChild(script);
+          }
+        } catch (e) {
+          console.error('Browsersync: could not append script tag', e);
+        }
+      })();
+      //]]>
+    </script> -->
+  </body>
+</html>

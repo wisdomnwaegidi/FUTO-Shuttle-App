@@ -1,0 +1,45 @@
+.findlocations {
+  color: $white;
+  background-color: $secondaryColor;
+  padding: 5px;
+  width: 32%;
+  text-align: center;
+  bottom: 19vw;
+  position: relative;
+  left: 14lvw;
+}
+
+.display__results {
+  display: none;
+  width: 32rem;
+  height: 20rem;
+  background-color: rgb(27, 26, 26);
+  left: 14.5rem;
+  bottom: 19vw;
+  // top: 21.1rem;
+  position: relative;
+  z-index: 1000;
+
+  .display {
+    color: $bgColor;
+
+    .show0 {
+      &.remove {
+        color: $bgColor;
+      }
+      &bgdisplay {
+        color: $bgColor;
+        font-size: 13px;
+        padding: 0 2px;
+        text-align: left;
+
+        .ul {
+          .selected {
+            font-size: 10px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
